@@ -22,7 +22,7 @@ public class User implements Serializable {
 	private String email;
 	private String password;
 	@Field("Location")
-    private Location Location;
+        private Location Location;
     
 	public User() {
 		super();
