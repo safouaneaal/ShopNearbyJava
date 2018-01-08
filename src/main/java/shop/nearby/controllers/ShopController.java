@@ -20,7 +20,7 @@ public class ShopController {
 	public ShopController() {}
     
 	@GetMapping("/shops")
-    public List<Shop> getusers()
+        public List<Shop> getusers()
 	{
     	return shopRepository.findAll();
     }
