@@ -3,18 +3,15 @@ package shop.nearby.entities;
 import java.io.Serializable;
 import java.util.List;
 
-
-//import javax.persistence.Embedded;
-//import javax.persistence.Entity;
-
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
+
 @Document(collection="shops")	
 public class Shop implements Serializable{
 	   @Id
-       private String id;
+           private String id;
 	   private String name;
 	   private String email;
 	   private String picture;
@@ -38,7 +35,7 @@ public class Shop implements Serializable{
 		this.location = location;
 	}
 
-    public String getName() {
+        public String getName() {
 		return name;
 	}
 
