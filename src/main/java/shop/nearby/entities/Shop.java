@@ -10,22 +10,20 @@ import org.springframework.data.mongodb.core.mapping.Field;
 
 @Document(collection="shops")	
 public class Shop implements Serializable{
-	   @Id
-           private String id;
-	   private String name;
-	   private String email;
-	   private String picture;
-	   private String city;
-	   @Field
-	   private Location location;
-	   @DBRef(lazy = true)
-	   private List<User> users;
+	  @Id
+          private String id;
+	  private String name;
+	  private String email;
+	  private String picture;
+	  private String city;
+	  @Field
+	  private Location location;
 	   
-	   public Shop() {
+	 public Shop() {
 		   
 	   }
 	    
-	   public Shop(String name, String email, String picture, String city,
+	 public Shop(String name, String email, String picture, String city,
 			Location location) {
 		super();
 		this.name = name;
