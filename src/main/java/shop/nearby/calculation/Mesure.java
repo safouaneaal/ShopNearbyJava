@@ -29,7 +29,7 @@ public class Mesure {
 		return out;
 	}
 	
-   public boolean getDiffDate(Date d) {
+           public boolean getDiffDate(Date d) {
 	   long diff = (new Date()).getTime() - d.getTime() ;
 
 		long diffSeconds = diff / 1000 % 60;
@@ -38,7 +38,7 @@ public class Mesure {
 		long diffDays = diff / (24 * 60 * 60 * 1000);
 
 		System.out.println(diffDays + " days, "+diffHours + " hours, "+diffMinutes + " minutes, "+diffSeconds + " seconds.");
-        if(diffDays==0 && diffHours <2) return true;
-        return false;
+           if(diffDays==0 && diffHours <2) return true;
+           return false;
    }
 }
