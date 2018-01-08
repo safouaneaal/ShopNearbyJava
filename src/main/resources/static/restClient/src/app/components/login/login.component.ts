@@ -17,10 +17,7 @@ export class LoginComponent implements OnInit {
     console.log(e);
     var username = e.target.elements[0].value;
     var password = e.target.elements[1].value;
-
-    if(username != null && password == '') {
-      this.user.setUserLoggedIn();
-      this.router.navigate(['users/'+username]);
-    }
+    this.user.setUserLoggedIn();
+    this.router.navigate(['users/'+username]);
   }
 }
