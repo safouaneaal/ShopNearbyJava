@@ -1,0 +1,28 @@
+<p></p>
+<div class="container">
+  <div *ngIf="shops">
+    <!--<input type="text" [(ngModel)]="userCode"/>-->
+    <!--<input type="button" class="btn btn-primary" (click)="getshops()" value="search"/>-->
+  <div class="row">
+
+  <div *ngFor="let im of shops" class="col-md-3">
+
+    <div class="container">
+    <div class="panel panel-primary ">
+
+      <div class="panel-heading">{{im.name}} : {{im.email}}</div>
+      <div class="panel-body">
+       <div class="parent"> <img src="{{im.picture}}" class="child" ></div>
+      </div>
+
+      <button  class="btn btn-primary dislikeBtn" (click)="dislike(im.name)" >Dislike</button>
+      <button  class="btn btn-primary likeBtn"  (click)="like(im.name)">Like</button>
+
+    </div>
+    </div>
+  </div>
+  </div>
+</div>
+</div>
+
+
