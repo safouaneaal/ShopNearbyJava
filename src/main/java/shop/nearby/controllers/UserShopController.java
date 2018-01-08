@@ -23,15 +23,15 @@ public class UserShopController {
 	
 
 	@PostMapping("/users/{id}/shops/{ids}/like")
-    public void postlikedshops(@PathVariable("id") String iduser ,@PathVariable("ids") String idshop){
+        public void postlikedshops(@PathVariable("id") String iduser ,@PathVariable("ids") String idshop){
 		userShopService.postlikedshops(iduser, idshop);
 	}
 	@PostMapping("/users/{id}/shops/{ids}/dislike")
-    public void postdislikedshops(@PathVariable("id") String iduser ,@PathVariable("ids") String idshop){
+        public void postdislikedshops(@PathVariable("id") String iduser ,@PathVariable("ids") String idshop){
 		userShopService.postdislikedshops(iduser, idshop);
 	}
 	@GetMapping("/users/{id}/preferedshops")
-    public List<Shop> getpreferedshops(@PathVariable("id") String iduser){
+        public List<Shop> getpreferedshops(@PathVariable("id") String iduser){
 		return userShopService.getpreferedshops(iduser);
 	}
 	@GetMapping("/users/{id}")
@@ -40,7 +40,7 @@ public class UserShopController {
 		return userShopService.getShopNearby(id);
 	}
 	@DeleteMapping("/users/{id}/preferedshops/{ids}/remove")
-    public void removeshops(@PathVariable("id") String iduser ,@PathVariable("ids") String idshop){
+        public void removeshops(@PathVariable("id") String iduser ,@PathVariable("ids") String idshop){
 		userShopService.removeshops(iduser,idshop);
 	}
 	
