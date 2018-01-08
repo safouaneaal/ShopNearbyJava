@@ -25,8 +25,7 @@ public class UserService {
 		// set Random id and Random Location to a User
 		user.setId(id);
 		user.setLocation(new Location("point",new ArrayList<Double>() 
-				{{add(x);
-		          add(y);}}));
-    	userRepository.save(user);
-    }
+				{{add(x);add(y);}}));
+    	        userRepository.save(user);
+       }
 }
