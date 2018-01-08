@@ -17,8 +17,7 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 	
-	
-    @RequestMapping(value="/users",method=RequestMethod.POST)
+	@RequestMapping(value="/users",method=RequestMethod.POST)
 	public void getusers(User user)
 	{
     	userService.getusers(user);
