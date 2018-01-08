@@ -17,7 +17,7 @@ import java.util.Set;
 @Document
 public class User implements Serializable {
 	@Id
-    private String id;
+        private String id;
 	private String name;
 	private String email;
 	private String password;
