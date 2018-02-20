@@ -13,6 +13,7 @@ import { NavigatorComponent } from './components/navigator/navigator.component';
 import {UserService} from './shared-service/user.service';
 import {AuthGuard} from './auth.guard';
 import { LoginComponent } from './components/login/login.component';
+import {PagerService} from "./shared-service/pager.service";
 
 const routes: Routes =
   [{path:'',component:ShopsComponent},
@@ -34,7 +35,7 @@ const routes: Routes =
   imports: [
     BrowserModule,FormsModule, RouterModule.forRoot(routes),HttpModule
   ],
-  providers: [ShopsService,ShopuserService,UserService],
+  providers: [ShopsService,ShopuserService,UserService, PagerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -4,6 +4,7 @@ import {Shop} from '../../shop';
 import {User} from '../../user';
 import {ActivatedRoute, Router} from '@angular/router';
 import {ShopuserService} from '../../shared-service/shopuser.service';
+import {PagerService} from "../../shared-service/pager.service";
 
 @Component({
   selector: 'app-shops',
@@ -14,10 +15,15 @@ export class ShopsComponent implements OnInit {
    shops:Shop[];
    username: string;
    observer:any;
+   // pager object
+   pager: any = {};
 
+   // paged items
+   pagedItems: any[];
   constructor(private _shopservice:ShopsService,
               private route:ActivatedRoute,
               private shopuser: ShopuserService,
+              private pagerService: PagerService,
               private _router:Router) {
     this.observer=this.route.params.subscribe(params=>{
     this.username=params['code']
@@ -29,6 +35,8 @@ export class ShopsComponent implements OnInit {
     this._shopservice.getSortedshopsId(this.username).subscribe((shops) => {
       console.log(shops);
       this.shops = shops;
+      // initialize to page 1
+      this.setPage(1);
     }, (error) => {
       console.log(error);
     })
@@ -55,4 +63,15 @@ export class ShopsComponent implements OnInit {
     this.shopuser.username=value;
   }
 
+  setPage(page: number) {
+    if (page < 1 || page > this.pager.totalPages) {
+      return;
+    }
+
+    // get pager object from service
+    this.pager = this.pagerService.getPager(this.shops.length, page);
+
+    // get current page of items
+    this.pagedItems = this.shops.slice(this.pager.startIndex, this.pager.endIndex + 1);
+  }
 }
