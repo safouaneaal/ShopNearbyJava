@@ -1,0 +1,27 @@
+.parent {
+  margin: auto;
+  background-color: #000;
+  display: flex;
+  height: 150px;
+  width: 150px;
+}
+
+.child {
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+.dislikeBtn
+{
+  margin-bottom: 5px;
+  margin-left: 35px;
+  width: 37%; height: 100%;
+  background-color: red;
+}
+.likeBtn
+{
+  margin-bottom: 5px;
+  width: 30%; height: 100%;
+  background-color: green;
+}
+
