@@ -1,0 +1,17 @@
+<P></P>
+<div class="container">
+  <h1 class="space">    Calculate the square of a given number  : </h1>
+  <p></p>
+  <p></p>
+  <div class="space">
+<input class="space" type="text" [(ngModel)]="a" required>
+<input class="space" type="text" [(ngModel)]="n" required>
+
+<button (click)="logText(a,n)">Valider</button></div>
+<P></P>
+<pre>SQUARE Coefficient : {{cof}}                                             SQUARE Natural Number : {{ex}}</pre>
+  <pre>SQUARE Safroos  : {{u}}</pre>
+<pre>SQUARE System : {{sq}}</pre>
+<pre>ERREUR  : {{(sq-u).toPrecision(2)}}</pre>
+  <pre>Digits number : {{x}}</pre>
+</div>

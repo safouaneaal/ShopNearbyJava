@@ -14,6 +14,7 @@ import {UserService} from './shared-service/user.service';
 import {AuthGuard} from './auth.guard';
 import { LoginComponent } from './components/login/login.component';
 import {PagerService} from "./shared-service/pager.service";
+import { SquareComponent } from './components/square/square.component';
 
 const routes: Routes =
   [{path:'',component:ShopsComponent},
@@ -22,6 +23,7 @@ const routes: Routes =
     {path: 'users/:code', canActivate: [AuthGuard], component: ShopsComponent},
     {path:'register',component:RegisterComponent},
     {path:'login',component:LoginComponent},
+    {path:'square',component:SquareComponent},
    {path:'',redirectTo:'register',pathMatch:'full'}]
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ const routes: Routes =
     PreferedshopsComponent,
     RegisterComponent,
     NavigatorComponent,
-    LoginComponent
+    LoginComponent,
+    SquareComponent
   ],
   imports: [
     BrowserModule,FormsModule, RouterModule.forRoot(routes),HttpModule

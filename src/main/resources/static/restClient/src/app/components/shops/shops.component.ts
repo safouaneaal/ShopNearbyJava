@@ -44,14 +44,14 @@ export class ShopsComponent implements OnInit {
   }
   like(shopname:string){
     for(var i=0;i<this.shops.length;i++)
-      if(this.shops[i].name ==shopname) this.shops.splice(i,1);
+      if(this.shops[i].name ==shopname) this.pagedItems.splice(i,1);
       console.log("shopname   ::  .."+shopname +" Username "+this.username);
     this._shopservice.like(this.username,shopname).subscribe((shops) => {}, (error) => {
     });
   }
   dislike(shopname:string){
     for(var i=0;i<this.shops.length;i++)
-      if(this.shops[i].name ==shopname) this.shops.splice(i,1);
+      if(this.shops[i].name ==shopname) this.pagedItems.splice(i,1);
       console.log("shopname   ::  .."+shopname +" Username "+this.username);
       this._shopservice.dislike(this.username,shopname).subscribe((shops) => {}, (error) => {
     });
